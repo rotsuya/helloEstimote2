@@ -3,6 +3,8 @@ var exec = require('cordova/exec');
 /**
  * Helpers
  */
+
+/*
 function isString(value) {
     return (typeof value == 'string' || value instanceof String);
 }
@@ -10,6 +12,7 @@ function isString(value) {
 function isInt(value) {
     return !isNaN(parseInt(value, 10)) && (parseFloat(value, 10) == parseInt(value, 10));
 }
+*/
 
 /**
  * Constructor
@@ -17,6 +20,7 @@ function isInt(value) {
 function EstimoteBeacons() {
 }
 
+/*
 EstimoteBeacons.prototype.startEstimoteBeaconsDiscoveryForRegion = function (successCallback) {
     if (typeof successCallback !== "function") {
         console.error("EstimoteBeacons.startEstimoteBeaconsDiscoveryForRegion failure: success callback parameter must be a function");
@@ -46,6 +50,7 @@ EstimoteBeacons.prototype.stopEstimoteBeaconsDiscoveryForRegion = function (succ
         []
     );
 };
+*/
 
 EstimoteBeacons.prototype.startRangingBeaconsInRegion = function (successCallback) {
     if (typeof successCallback !== "function") {
@@ -62,6 +67,7 @@ EstimoteBeacons.prototype.startRangingBeaconsInRegion = function (successCallbac
     );
 };
 
+/*
 EstimoteBeacons.prototype.stopRangingBeaconsInRegion = function (successCallback) {
     if (typeof successCallback !== "function") {
         console.error("EstimoteBeacons.stopRangingBeaconsInRegion failure: success callback parameter must be a function");
@@ -417,6 +423,7 @@ EstimoteBeacons.prototype.updateFirmwareOfConnectedBeacon = function (progressCa
         }, 100);
     }
 };
+*/
 
 EstimoteBeacons.prototype.getBeacons = function (successCallback) {
     if (typeof successCallback !== "function") {
@@ -433,6 +440,7 @@ EstimoteBeacons.prototype.getBeacons = function (successCallback) {
     );
 };
 
+/*
 EstimoteBeacons.prototype.startVirtualBeacon = function (major, minor, id, successCallback) {
     if (!isInt(major)) {
         console.error("EstimoteBeacons.startVirtualBeacon failure: major must be a valid integer");
@@ -475,6 +483,7 @@ EstimoteBeacons.prototype.stopVirtualBeacon = function(successCallback) {
         []
     );
 };
+*/
 
 var estimoteBeacons = new EstimoteBeacons();
 module.exports = estimoteBeacons;
